@@ -12,12 +12,17 @@ const Counter = () => {
     setCount(count - 1);
   };
 
+  const handleReset = () => {
+    setCount((prevState) => 0)
+  }
+
   return (  
     <>
     <span>Current Count: {count} </span>
     <section>
       <button onClick={handleIncrement}>+</button>
       <button onClick={handleDecrement}>-</button>
+      <button onClick={handleReset}>Reset</button>
     </section>
     </>
   );
