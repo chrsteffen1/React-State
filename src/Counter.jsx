@@ -12,8 +12,11 @@ const Counter = () => {
     setCount(count - 1);
   };
 
+  const handleMultiply = () =>{
+    setCount(count * count)
+  }
   const handleReset = () => {
-    setCount((prevState) => 0)
+    setCount(0)
   }
 
   return (  
@@ -22,6 +25,7 @@ const Counter = () => {
     <section>
       <button onClick={handleIncrement}>+</button>
       <button onClick={handleDecrement}>-</button>
+      <button onClick={handleMultiply}>*</button>
       <button onClick={handleReset}>Reset</button>
     </section>
     </>
